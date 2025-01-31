@@ -7,7 +7,7 @@ let nomeAmigo = [];
 function adicionarAmigo(){
     let entrada = document.querySelector('#amigo'); //Capturar o valor do campo de entrada
 //Validar a entrada- usando o trim para retirar os espaços
-    if (entrada.value.trim() === '') {
+    if (entrada.value.trim().toLowerCase() === '') {
         alert('Por favor, insira um nome.');  
         return; 
     }
@@ -15,6 +15,8 @@ function adicionarAmigo(){
     let nome = entrada.value.trim().toLowerCase();
     nomeAmigo.push(nome);
     entrada.value = ""; // limpando a entrada de nomes
+
+    AtualizarLista();
 }
 
 function AtualizarLista(){
@@ -30,3 +32,18 @@ function AtualizarLista(){
             
 }
 
+function sortearAmigo (){ //Validar que há amigos disponíveis: Antes de sortear, verificar se o array amigos não está vazio.
+    if (nomeAmigo.length === 0) {
+        alert('Por favor, insira um nome.');  
+        return; 
+    }
+    //Gerar um índice aleatório: Usar Math.random() e Math.floor() para selecionar um índice aleatório do array.
+    let indiceAleatorio = Math.floor(Math.random() * nomeAmigo.length);
+
+    //Obter o nome sorteado: Utilizar o índice aleatório para acessar o nome correspondente no array.
+    let amigoSorteado = nomeAmigo[indiceAleatorio];
+
+
+    document.getElementById('resultado').innerHTML = `${amigoSorteado}`;
+
+}
