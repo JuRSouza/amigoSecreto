@@ -29,6 +29,15 @@ O **Amigo Secreto** é uma aplicação simples que permite aos usuários adicion
 * CSS
 * JavaScript
 
+##  🚀 Como executar o projeto
+
+1. **Clone este repositório**:
+git clone   https://github.com/JuRSouza/amigoSecreto.git
+
+2. Abra o arquivo index.html no navegador
+
+
+
 ##  🛠️   Melhorias futuras
 
 * Adicionar funcionalidade para envio automático dos amigos sorteados por e-mail
