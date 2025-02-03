@@ -6,7 +6,7 @@ let nomeAmigo = [];
 
 function adicionarAmigo(){
     let entrada = document.querySelector('#amigo'); //Capturar o valor do campo de entrada
-//Validar a entrada- usando o trim para retirar os espaços
+//Validar a entrada- usando o trim para retirar os espaços e toLowerCase para deixar todas as letras em minúsculas
     if (entrada.value.trim().toLowerCase() === '') {
         alert('Por favor, insira um nome.');  
         return; 
